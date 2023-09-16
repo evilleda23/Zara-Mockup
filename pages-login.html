@@ -53,7 +53,7 @@
 
                 <div class="card-body">
                   <div class="d-flex justify-content-center ">
-                    <a href="https://www.zara.com/gt/" target="_blank"><img src="https://findvectorlogo.com/wp-content/uploads/2022/02/zara-vector-logo-2022.png" /></a>
+                    <a href="https://www.zara.com/gt/" target="_blank"><img class="logo-zara" src="https://findvectorlogo.com/wp-content/uploads/2022/02/zara-vector-logo-2022.png" /></a>
               
                   </div><!-- End Logo -->
                   <div class="pt-4 pb-2">
@@ -61,7 +61,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation"   id="loginFrom" method="post" novalidate>
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
@@ -86,9 +86,6 @@
                     </div>
                     <div class="col-12">
                       <button class="btn btn-primary  w-100" type="submit">Login</button>
-                    </div>
-                    <div class="col-12">
-                      <p class="small mb-0">Don't have account? <a href="pages-register.html">Create an account</a></p>
                     </div>
                   </form>
 
@@ -126,7 +123,16 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById("loginFrom").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
 
+        // Here, you can perform any necessary form validation
+
+        // Redirect to index.html
+        window.location.href = "index.html";
+    });
+</script>
 </body>
 
 </html>
