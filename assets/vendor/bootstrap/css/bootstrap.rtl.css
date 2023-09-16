@@ -2878,21 +2878,30 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #0d6efd;
-  --bs-btn-border-color: #0d6efd;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
-  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-color: #fff; /* White text */
+  --bs-btn-bg: #000; /* Black background */
+  --bs-btn-border-color: #000; /* Black border */
+
+  /* Hover styles */
+  --bs-btn-hover-color: #fff; /* White text */
+  --bs-btn-hover-bg: #333; /* A darker gray */
+  --bs-btn-hover-border-color: #222; /* A darker gray border */
+
+  /* Focus styles */
+  --bs-btn-focus-shadow-rgb: 0, 0, 0; /* Black focus shadow */
+
+  /* Active styles */
+  --bs-btn-active-color: #fff; /* White text */
+  --bs-btn-active-bg: #222; /* A darker gray */
+  --bs-btn-active-border-color: #111; /* A darker gray border */
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0d6efd;
-  --bs-btn-disabled-border-color: #0d6efd;
+
+  /* Disabled styles */
+  --bs-btn-disabled-color: #888; /* Light gray text for disabled */
+  --bs-btn-disabled-bg: #333; /* A medium gray for disabled */
+  --bs-btn-disabled-border-color: #333; /* A medium gray border for disabled */
 }
+
 
 .btn-secondary {
   --bs-btn-color: #fff;
