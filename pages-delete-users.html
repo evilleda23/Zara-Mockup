@@ -704,7 +704,7 @@
             href="pages-blank.html"
           >
             <i class="bi bi-file-earmark"></i>
-            <span>Users</span>
+            <span>Blank</span>
           </a>
         </li>
         <!-- End Blank Page Nav -->
@@ -716,329 +716,62 @@
       id="main"
       class="main"
     >
-      <div class="d-flex justify-content-between">
-        <div class="pagetitle">
-          <h1>Usuarios</h1>
-          <nav>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item">Pages</li>
-              <li class="breadcrumb-item active">Usuarios</li>
-            </ol>
-          </nav>
-        </div>
+      <div class="pagetitle">
+        <h1>Eliminar Usuario</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Pages</li>
+            <li class="breadcrumb-item active">Eliminar Usuario</li>
+          </ol>
+        </nav>
       </div>
       <!-- End Page Title -->
 
       <section class="section">
         <div class="row">
           <div class="card p-3">
-            <a
-              class="btn btn-primary d-flex align-self-start"
-              href="/pages-create-users.html"
-            >
-              + Agregar Usuario</a
-            >
+            <div class="d-flex justify-content-between">
+              <div>
+                <p class="text-muted m-0">
+                  Estas seguro que quieres eliminar este usuario?
+                </p>
+              </div>
+
+              <a
+                class="align-self-end"
+                role="button"
+                onclick="window.history.back()"
+                >Regresar
+              </a>
+            </div>
             <hr />
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Email</th>
-                  <th>Username</th>
-                  <th>FirstName</th>
-                  <th>LastName</th>
-                  <th>Roles</th>
-                  <th>Activated</th>
+            <dl class="row">
+              <dt class="col-sm-2">Email</dt>
+              <dd class="col-sm-10">prueba@prueba.com</dd>
+              <dt class="col-sm-2">Username</dt>
+              <dd class="col-sm-10">evilleda</dd>
+              <dt class="col-sm-2">FirstName</dt>
+              <dd class="col-sm-10">Estuardo</dd>
+              <dt class="col-sm-2">LastName</dt>
+              <dd class="col-sm-10">Villeda</dd>
+              <dt class="col-sm-2">Activated</dt>
+              <dd class="col-sm-10">
+                <input type="checkbox" name="activated" id="activated" checked="true">
+                </dd>
+              <dt class="col-sm-2">IsLocked</dt>
+              <dd class="col-sm-10"> <input type="checkbox" name="activated" id="activated" checked="false">
+              </dd></dd>
+            </dl>
 
-                  <th>IsLocked</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>fdominguez</td>
-                  <td>Franklin</td>
-                  <td>Dominguez</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
+            
 
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
+              <a
+                href="/pages-users.html"
 
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                      action="Edit"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      action="Details"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                  
-                      href="/pages-delete-users.html"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>mmeza</td>
-                  <td>Moises</td>
-                  <td>Meza</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
-
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                      action="Edit"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      action="Details"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                      action="Delete"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>mpineda</td>
-                  <td>María José</td>
-                  <td>Pineda</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
-
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                      action="Edit"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      action="Details"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                      action="Delete"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>evilleda</td>
-                  <td>Estuardo</td>
-                  <td>Villeda</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
-
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                      action="Edit"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      action="Details"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                      action="Delete"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>random@random.com</td>
-                  <td>rrandom</td>
-                  <td>Random</td>
-                  <td>Random</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-danger"
-                    >
-                      <i class="bi bi-person-dash"></i>
-                    </a>
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-unlock"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      action="Edit"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      action="Details"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                      action="Delete"
-                      route-id="@item.Id"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                class="btn btn-danger"
+              >Eliminar</a>
+     
           </div>
         </div>
       </section>
