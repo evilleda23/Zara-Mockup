@@ -1,7 +1,7 @@
 /**
 * PHP Email Form Validation - v3.5
-* URL: https://bootstrapmade.com/php-email-form/
-* Author: BootstrapMade.com
+* URL: https://Grupo 24 Seminario de Casos.com/php-email-form/
+* Author: Grupo 24 Seminario de Casos.com
 */
 (function () {
   "use strict";

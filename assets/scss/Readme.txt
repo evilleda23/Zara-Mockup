@@ -1,1 +1,1 @@
-The .scss (Sass) files are only avilable in the pro version. You can buy it from: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+The .scss (Sass) files are only avilable in the pro version. You can buy it from: https://Grupo 24 Seminario de Casos.com/nice-admin-bootstrap-admin-html-template/
