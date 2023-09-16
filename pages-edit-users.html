@@ -417,32 +417,35 @@
           </a>
         </li>
         <!-- End Dashboard Nav -->
-   <li class="nav-item">
-        <a class="nav-link collapsed"
-           data-bs-target="#users-nav"
-           data-bs-toggle="collapse"
-           href="#">
-            <i class="bi bi-people"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#users-nav"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-people"></i><span>Usuarios</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
 
-        <ul id="users-nav"
+          <ul
+            id="users-nav"
             class="nav-content collapse"
-            data-bs-parent="#sidebar-nav">
-
+            data-bs-parent="#sidebar-nav"
+          >
             <li>
-                <a href="/pages-users.html">
-                    <i class="bi bi-circle"></i><span>Listar Usuarios</span>
-                </a>
+              <a href="/pages-users.html">
+                <i class="bi bi-circle"></i><span>Listar Usuarios</span>
+              </a>
             </li>
             <li>
-                <a href="/pages-create-users.html">
-                    <i class="bi bi-circle"></i><span>Crear Usuario</span>
-                </a>
+              <a href="/pages-create-users.html">
+                <i class="bi bi-circle"></i><span>Crear Usuario</span>
+              </a>
             </li>
-           
-        </ul>
-    </li>
-<!-- End Users Nav -->
+          </ul>
+        </li>
+        <!-- End Users Nav -->
         <li class="nav-item">
           <a
             class="nav-link collapsed"
@@ -704,7 +707,7 @@
             href="pages-blank.html"
           >
             <i class="bi bi-file-earmark"></i>
-            <span>Users</span>
+            <span>Blank</span>
           </a>
         </li>
         <!-- End Blank Page Nav -->
@@ -716,311 +719,170 @@
       id="main"
       class="main"
     >
-      <div class="d-flex justify-content-between">
-        <div class="pagetitle">
-          <h1>Usuarios</h1>
-          <nav>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item">Pages</li>
-              <li class="breadcrumb-item active">Usuarios</li>
-            </ol>
-          </nav>
-        </div>
+      <div class="pagetitle">
+        <h1>Editar Usuario</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Pages</li>
+            <li class="breadcrumb-item active">Editar Usuario</li>
+          </ol>
+        </nav>
       </div>
       <!-- End Page Title -->
 
       <section class="section">
         <div class="row">
           <div class="card p-3">
-            <a
-              class="btn btn-primary d-flex align-self-start"
-              href="/pages-create-users.html"
-            >
-              + Agregar Usuario</a
-            >
+            <div class="d-flex justify-content-end">
+             
+              <a
+                class="align-self-end"
+                role="button"
+                onclick="window.history.back()"
+                >Regresar
+              </a>
+            </div>
+
             <hr />
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Email</th>
-                  <th>Username</th>
-                  <th>FirstName</th>
-                  <th>LastName</th>
-                  <th>Roles</th>
-                  <th>Activated</th>
 
-                  <th>Bloqueado</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>fdominguez</td>
-                  <td>Franklin</td>
-                  <td>Dominguez</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
+            <form
+              class="mx-4 needs-validation"
+              id="editUser"
+              method="post"
+              novalidate
+            >
+              <div class="row mb-3">
+                <label
+                  for="username"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Username</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    class="form-control"
+                    id="username"
+                    required
+                    value="evilleda"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa tu username.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="email"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Email</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    class="form-control"
+                    id="email"
+                    required
+                    value="prueba@prueba.com"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa tu Email!
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="firstname"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Nombre</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    class="form-control"
+                    id="firstname"
+                    required
+                    value="Estuardo"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa tu Nombre!
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="lastname"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Apellido</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    class="form-control"
+                    id="lastname"
+                    value="Villeda"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa tu Apellido!
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="password"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Password</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    class="form-control"
+                    id="password"
+                    required
+                    type="password"
+                    value="123"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa tu password!
+                  </div>
+                </div>
+              </div>
 
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                     href="/pages-edit-users.html"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      href="/pages-detail-users.html"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                  
-                      href="/pages-delete-users.html"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>mmeza</td>
-                  <td>Moises</td>
-                  <td>Meza</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                     href="/pages-edit-users.html"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      href="/pages-detail-users.html"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                  
-                      href="/pages-delete-users.html"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>mpineda</td>
-                  <td>María José</td>
-                  <td>Pineda</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
-
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                     href="/pages-edit-users.html"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      href="/pages-detail-users.html"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                  
-                      href="/pages-delete-users.html"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>prueba@prueba.com</td>
-                  <td>evilleda</td>
-                  <td>Estuardo</td>
-                  <td>Villeda</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-success"
-                    >
-                      <i class="bi bi-person-check"></i>
-                    </a>
-
-                    <!-- <a href="#" class="btn text-danger">
-                                          <i class="bi bi-person-dash"></i>
-                                      </a> -->
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-lock"></i>
-                    </a>
-
-                    <!-- <a  href="#" class="btn text-warning">
-                                          <i class="bi bi-unlock"></i>
-                                      </a> -->
-                  </td>
-                  <td>
-                    <a
-                     href="/pages-edit-users.html"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      href="/pages-detail-users.html"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                  
-                      href="/pages-delete-users.html"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>random@random.com</td>
-                  <td>rrandom</td>
-                  <td>Random</td>
-                  <td>Random</td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn"
-                    >
-                      <i class="bi bi-clipboard"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-danger"
-                    >
-                      <i class="bi bi-person-dash"></i>
-                    </a>
-                  </td>
-
-                  <td>
-                    <a
-                      href="#"
-                      class="btn text-warning"
-                    >
-                      <i class="bi bi-unlock"></i>
-                    </a>
-                  </td>
-                  <td>
-                    <a
-                     href="/pages-edit-users.html"
-                      ><i class="btn bi bi-pencil"></i
-                    ></a>
-                    |
-                    <a
-                      href="/pages-detail-users.html"
-                      ><i class="btn bi bi-card-text"></i
-                    ></a>
-                    |
-                    <a
-                  
-                      href="/pages-delete-users.html"
-                      ><i class="btn bi bi-trash3"></i
-                    ></a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <div class="row mb-3">
+                <label
+                  class="col-md-4 col-lg-3 col-form-label"
+                  for="Activated"
+                  >Activado
+                </label>
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="checkbox"
+                    name="activated"
+                    id="activated"
+                    checked
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  class="col-md-4 col-lg-3 col-form-label"
+                  for="IsLocked"
+                  >Bloqueado
+                </label>
+                <div class="col-md-8 col-lg-9">
+                  <dd class="col-sm-10">
+                    <input
+                      type="checkbox"
+                      name="activated"
+                      id="activated"
+                    />
+                  </dd>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Actualizar Usuario"
+                  class="btn btn-primary"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </section>
