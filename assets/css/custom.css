@@ -1,3 +1,12 @@
 .logo-zara{
  width: 25rem;
 }
+
+.table-with-scroll {
+  overflow-x: auto;
+}
+
+
+
+
+

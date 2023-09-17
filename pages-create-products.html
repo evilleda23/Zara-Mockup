@@ -417,35 +417,32 @@
           </a>
         </li>
         <!-- End Dashboard Nav -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#users-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-people"></i><span>Usuarios</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
+   <li class="nav-item">
+        <a class="nav-link collapsed"
+           data-bs-target="#users-nav"
+           data-bs-toggle="collapse"
+           href="#">
+            <i class="bi bi-people"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
 
-          <ul
-            id="users-nav"
+        <ul id="users-nav"
             class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
+            data-bs-parent="#sidebar-nav">
+
             <li>
-              <a href="/pages-users.html">
-                <i class="bi bi-circle"></i><span>Listar Usuarios</span>
-              </a>
+                <a href="/pages-users.html">
+                    <i class="bi bi-circle"></i><span>Listar Usuarios</span>
+                </a>
             </li>
             <li>
-              <a href="/pages-create-users.html">
-                <i class="bi bi-circle"></i><span>Crear Usuario</span>
-              </a>
+                <a href="/pages-create-users.html">
+                    <i class="bi bi-circle"></i><span>Crear Usuario</span>
+                </a>
             </li>
-          </ul>
-        </li>
-        <!-- End Users Nav -->
+           
+        </ul>
+    </li>
+<!-- End Users Nav -->
         <li class="nav-item">
           <a
             class="nav-link collapsed"
@@ -720,12 +717,12 @@
       class="main"
     >
       <div class="pagetitle">
-        <h1>Editar Usuario</h1>
+        <h1>Crear Usuario</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Pages</li>
-            <li class="breadcrumb-item active">Editar Usuario</li>
+            <li class="breadcrumb-item active">Crear Usuario</li>
           </ol>
         </nav>
       </div>
@@ -735,7 +732,6 @@
         <div class="row">
           <div class="card p-3">
             <div class="d-flex justify-content-end">
-             
               <a
                 class="align-self-end"
                 role="button"
@@ -743,21 +739,20 @@
                 >Regresar
               </a>
             </div>
-
             <hr />
 
-            <form class="mx-4 needs-validation" id="editProduct" method="post" novalidate>
+            <form class="mx-4 needs-validation" id="createProduct" method="post" novalidate>
               <div class="row mb-3">
                 <label for="nombre" class="col-md-4 col-lg-3 col-form-label form-label">Nombre</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="nombre" required value="Slogan T-shirt"/>
+                  <input type="text" class="form-control" id="nombre" required />
                   <div class="invalid-feedback">Por favor ingresa el nombre.</div>
                 </div>
               </div>
               <div class="row mb-3">
                 <label for="id" class="col-md-4 col-lg-3 col-form-label form-label">ID</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="id" required value="001"/>
+                  <input type="text" class="form-control" id="id" required />
                   <div class="invalid-feedback">Por favor ingresa el ID.</div>
                 </div>
               </div>
@@ -766,61 +761,62 @@
                 <div class="col-md-8 col-lg-9">
                   <select class="form-control" id="categoria" required>
                     <option value="">Seleccionar categoría o tipo</option>
-                    <option selected value="Clothing">Clothing</option>
+                    <option value="Clothing">Clothing</option>
                     <option value="Footwear">Footwear</option>
                     <option value="Accessories">Accessories</option>
                   </select>
                   <div class="invalid-feedback">Por favor selecciona la categoría o tipo.</div>
                 </div>
               </div>
+              
               <div class="row mb-3">
                 <label for="precio" class="col-md-4 col-lg-3 col-form-label form-label">Precio</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="precio" required value="$19.99" />
+                  <input type="text" class="form-control" id="precio" required />
                   <div class="invalid-feedback">Por favor ingresa el precio.</div>
                 </div>
               </div>
               <div class="row mb-3">
                 <label for="stock" class="col-md-4 col-lg-3 col-form-label form-label">Stock</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="stock" required value="100" />
+                  <input type="text" class="form-control" id="stock" required />
                   <div class="invalid-feedback">Por favor ingresa el stock.</div>
                 </div>
               </div>
               <div class="row mb-3">
                 <label for="sku" class="col-md-4 col-lg-3 col-form-label form-label">SKU</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="sku" required value="SKU001" />
+                  <input type="text" class="form-control" id="sku" required />
                   <div class="invalid-feedback">Por favor ingresa el SKU.</div>
                 </div>
               </div>
               <div class="row mb-3">
                 <label for="fechaAgregado" class="col-md-4 col-lg-3 col-form-label form-label">Fecha de Agregado</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="date" class="form-control" id="fechaAgregado" required value="2023-09-01" />
+                  <input type="date" class="form-control" id="fechaAgregado" required />
                   <div class="invalid-feedback">Por favor ingresa la fecha de agregado.</div>
                 </div>
               </div>
               <div class="row mb-3">
                 <label for="fechaActualizacion" class="col-md-4 col-lg-3 col-form-label form-label">Fecha de Actualización</label>
                 <div class="col-md-8 col-lg-9">
-                  <input type="date" class="form-control" id="fechaActualizacion" required value="2023-09-15"/>
+                  <input type="date" class="form-control" id="fechaActualizacion" required />
                   <div class="invalid-feedback">Por favor ingresa la fecha de actualización.</div>
                 </div>
               </div>
               <div class="row mb-3">
-                <label class="col-md-4 col-lg-3 col-form-label" for="estado">Estado</label>
+                <label for="estado" class="col-md-4 col-lg-3 col-form-label form-label">Estado</label>
                 <div class="col-md-8 col-lg-9">
                   <select class="form-control" id="estado" required>
                     <option value="">Seleccionar estado</option>
-                    <option selected value="Activo">Activo</option>
+                    <option value="Activo">Activo</option>
                     <option value="Inactivo">Inactivo</option>
                   </select>
                   <div class="invalid-feedback">Por favor selecciona el estado.</div>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="submit" value="Actualizar Producto" class="btn btn-primary" />
+              <div class="form-group mt-2">
+                <input type="submit" value="Crear" class="btn btn-primary" />
               </div>
             </form>
             
@@ -860,5 +856,43 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document
+        .getElementById('createProduct')
+        .addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent the default form submission
+    
+          // Get values from form fields
+          const nombre = document.getElementById('nombre').value.trim();
+          const id = document.getElementById('id').value.trim();
+          const categoria = document.getElementById('categoria').value.trim();
+          const precio = document.getElementById('precio').value.trim();
+          const stock = document.getElementById('stock').value.trim();
+          const sku = document.getElementById('sku').value.trim();
+          const fechaAgregado = document.getElementById('fechaAgregado').value.trim();
+          const fechaActualizacion = document.getElementById('fechaActualizacion').value.trim();
+          const estado = document.getElementById('estado').value;
+    
+          // Check if any of the required fields are empty
+          if (
+            nombre === '' ||
+            id === '' ||
+            categoria === '' ||
+            precio === '' ||
+            stock === '' ||
+            sku === '' ||
+            fechaAgregado === '' ||
+            fechaActualizacion === '' ||
+            estado === ''
+          ) {
+            event.preventDefault(); // Prevent form submission
+          } else {
+            // Continue with form submission (You can add your logic here)
+            window.location.href = '/pages-products.html';
+            // You can add code here to submit the form data to a server or perform other actions
+          }
+        });
+    </script>
+    
   </body>
 </html>
