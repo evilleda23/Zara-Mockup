@@ -746,83 +746,143 @@
 
             <hr />
 
-            <form class="mx-4 needs-validation" id="editProduct" method="post" novalidate>
-              <div class="row mb-3">
-                <label for="nombre" class="col-md-4 col-lg-3 col-form-label form-label">Nombre</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="nombre" required value="Slogan T-shirt"/>
-                  <div class="invalid-feedback">Por favor ingresa el nombre.</div>
+            <form
+            class="mx-4 needs-validation"
+            id="editUser"
+            method="post"
+            novalidate
+          >
+            <div class="row mb-3">
+              <label
+                for="username"
+                class="col-md-4 col-lg-3 col-form-label form-label"
+                >Username</label
+              >
+              <div class="col-md-8 col-lg-9">
+                <input
+                  class="form-control"
+                  id="username"
+                  required
+                  value="evilleda"
+                />
+                <div class="invalid-feedback">
+                  Por favor ingresa tu username.
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="id" class="col-md-4 col-lg-3 col-form-label form-label">ID</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="id" required value="001"/>
-                  <div class="invalid-feedback">Por favor ingresa el ID.</div>
+            </div>
+            <div class="row mb-3">
+              <label
+                for="email"
+                class="col-md-4 col-lg-3 col-form-label form-label"
+                >Email</label
+              >
+              <div class="col-md-8 col-lg-9">
+                <input
+                  class="form-control"
+                  id="email"
+                  required
+                  value="prueba@prueba.com"
+                />
+                <div class="invalid-feedback">
+                  Por favor ingresa tu Email!
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="categoria" class="col-md-4 col-lg-3 col-form-label form-label">Categoría o Tipo</label>
-                <div class="col-md-8 col-lg-9">
-                  <select class="form-control" id="categoria" required>
-                    <option value="">Seleccionar categoría o tipo</option>
-                    <option selected value="Clothing">Clothing</option>
-                    <option value="Footwear">Footwear</option>
-                    <option value="Accessories">Accessories</option>
-                  </select>
-                  <div class="invalid-feedback">Por favor selecciona la categoría o tipo.</div>
+            </div>
+            <div class="row mb-3">
+              <label
+                for="firstname"
+                class="col-md-4 col-lg-3 col-form-label form-label"
+                >Nombre</label
+              >
+              <div class="col-md-8 col-lg-9">
+                <input
+                  class="form-control"
+                  id="firstname"
+                  required
+                  value="Estuardo"
+                />
+                <div class="invalid-feedback">
+                  Por favor ingresa tu Nombre!
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="precio" class="col-md-4 col-lg-3 col-form-label form-label">Precio</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="precio" required value="$19.99" />
-                  <div class="invalid-feedback">Por favor ingresa el precio.</div>
+            </div>
+            <div class="row mb-3">
+              <label
+                for="lastname"
+                class="col-md-4 col-lg-3 col-form-label form-label"
+                >Apellido</label
+              >
+              <div class="col-md-8 col-lg-9">
+                <input
+                  class="form-control"
+                  id="lastname"
+                  value="Villeda"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Por favor ingresa tu Apellido!
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="stock" class="col-md-4 col-lg-3 col-form-label form-label">Stock</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="stock" required value="100" />
-                  <div class="invalid-feedback">Por favor ingresa el stock.</div>
+            </div>
+            <div class="row mb-3">
+              <label
+                for="password"
+                class="col-md-4 col-lg-3 col-form-label form-label"
+                >Password</label
+              >
+              <div class="col-md-8 col-lg-9">
+                <input
+                  class="form-control"
+                  id="password"
+                  required
+                  type="password"
+                  value="123"
+                />
+                <div class="invalid-feedback">
+                  Por favor ingresa tu password!
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="sku" class="col-md-4 col-lg-3 col-form-label form-label">SKU</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="text" class="form-control" id="sku" required value="SKU001" />
-                  <div class="invalid-feedback">Por favor ingresa el SKU.</div>
-                </div>
+            </div>
+
+            <div class="row mb-3">
+              <label
+                class="col-md-4 col-lg-3 col-form-label"
+                for="Activated"
+                >Activado
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <input
+                  type="checkbox"
+                  name="activated"
+                  id="activated"
+                  checked
+                />
               </div>
-              <div class="row mb-3">
-                <label for="fechaAgregado" class="col-md-4 col-lg-3 col-form-label form-label">Fecha de Agregado</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="date" class="form-control" id="fechaAgregado" required value="2023-09-01" />
-                  <div class="invalid-feedback">Por favor ingresa la fecha de agregado.</div>
-                </div>
+            </div>
+            <div class="row mb-3">
+              <label
+                class="col-md-4 col-lg-3 col-form-label"
+                for="IsLocked"
+                >Bloqueado
+              </label>
+              <div class="col-md-8 col-lg-9">
+                <dd class="col-sm-10">
+                  <input
+                    type="checkbox"
+                    name="activated"
+                    id="activated"
+                  />
+                </dd>
               </div>
-              <div class="row mb-3">
-                <label for="fechaActualizacion" class="col-md-4 col-lg-3 col-form-label form-label">Fecha de Actualización</label>
-                <div class="col-md-8 col-lg-9">
-                  <input type="date" class="form-control" id="fechaActualizacion" required value="2023-09-15"/>
-                  <div class="invalid-feedback">Por favor ingresa la fecha de actualización.</div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label class="col-md-4 col-lg-3 col-form-label" for="estado">Estado</label>
-                <div class="col-md-8 col-lg-9">
-                  <select class="form-control" id="estado" required>
-                    <option value="">Seleccionar estado</option>
-                    <option selected value="Activo">Activo</option>
-                    <option value="Inactivo">Inactivo</option>
-                  </select>
-                  <div class="invalid-feedback">Por favor selecciona el estado.</div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Actualizar Producto" class="btn btn-primary" />
-              </div>
-            </form>
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                value="Actualizar Usuario"
+                class="btn btn-primary"
+              />
+            </div>
+          </form>
             
           </div>
         </div>
@@ -860,5 +920,34 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document
+        .getElementById('editUser')
+        .addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Here, you can perform any necessary form validation
+          const username = document.getElementById('username').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const firstname = document.getElementById('firstname').value.trim();
+          const lastname = document.getElementById('lastname').value.trim();
+          const password = document.getElementById('password').value.trim();
+
+          // Check if the username is empty
+          if (
+            username === '' ||
+            password === '' ||
+            email === '' ||
+            firstname === '' ||
+            lastname === ''
+          ) {
+            event.preventDefault(); // Prevent form submission
+          } else {
+            // Continue with form submission
+            // Redirect to index.html
+            window.location.href = '/pages-users.html';
+          }
+        });
+    </script>
   </body>
 </html>

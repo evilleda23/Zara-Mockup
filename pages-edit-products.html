@@ -7,7 +7,7 @@
       name="viewport"
     />
 
-    <title>Components / Accordion</title>
+    <title>Usuarios - Zara</title>
     <meta
       content=""
       name="description"
@@ -99,7 +99,7 @@
           href="index.html"
           class="logo d-flex align-items-center"
         >
-          <img class="images-logo"
+          <img
             src="assets/img/Standard.png"
             alt=""
           />
@@ -253,7 +253,7 @@
 
               <li class="message-item">
                 <a href="#">
-                  <img class="images-logo"
+                  <img
                     src="assets/img/messages-1.jpg"
                     alt=""
                     class="rounded-circle"
@@ -274,7 +274,7 @@
 
               <li class="message-item">
                 <a href="#">
-                  <img class="images-logo"
+                  <img
                     src="assets/img/messages-2.jpg"
                     alt=""
                     class="rounded-circle"
@@ -295,7 +295,7 @@
 
               <li class="message-item">
                 <a href="#">
-                  <img class="images-logo"
+                  <img
                     src="assets/img/messages-3.jpg"
                     alt=""
                     class="rounded-circle"
@@ -328,7 +328,7 @@
               href="#"
               data-bs-toggle="dropdown"
             >
-              <img class="images-logo"
+              <img
                 src="assets/img/profile-img.jpg"
                 alt="Perfil"
                 class="rounded-circle"
@@ -417,32 +417,35 @@
           </a>
         </li>
         <!-- End Dashboard Nav -->
-   <li class="nav-item">
-        <a class="nav-link collapsed"
-           data-bs-target="#users-nav"
-           data-bs-toggle="collapse"
-           href="#">
-            <i class="bi bi-people"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
+        <li class="nav-item">
+          <a
+            class="nav-link collapsed"
+            data-bs-target="#users-nav"
+            data-bs-toggle="collapse"
+            href="#"
+          >
+            <i class="bi bi-people"></i><span>Usuarios</span
+            ><i class="bi bi-chevron-down ms-auto"></i>
+          </a>
 
-        <ul id="users-nav"
+          <ul
+            id="users-nav"
             class="nav-content collapse"
-            data-bs-parent="#sidebar-nav">
-
+            data-bs-parent="#sidebar-nav"
+          >
             <li>
-                <a href="/pages-users.html">
-                    <i class="bi bi-circle"></i><span>Listar Usuarios</span>
-                </a>
+              <a href="/pages-users.html">
+                <i class="bi bi-circle"></i><span>Listar Usuarios</span>
+              </a>
             </li>
             <li>
-                <a href="/pages-create-users.html">
-                    <i class="bi bi-circle"></i><span>Crear Usuario</span>
-                </a>
+              <a href="/pages-create-users.html">
+                <i class="bi bi-circle"></i><span>Crear Usuario</span>
+              </a>
             </li>
-           
-        </ul>
-    </li>
-<!-- End Users Nav -->
+          </ul>
+        </li>
+        <!-- End Users Nav -->
         <li class="nav-item">
           <a
             class="nav-link collapsed"
@@ -704,7 +707,7 @@
             href="pages-blank.html"
           >
             <i class="bi bi-file-earmark"></i>
-            <span>Users</span>
+            <span>Blank</span>
           </a>
         </li>
         <!-- End Blank Page Nav -->
@@ -716,235 +719,228 @@
       id="main"
       class="main"
     >
-      <div class="d-flex justify-content-between">
-        <div class="pagetitle">
-          <h1>Promociones</h1>
-          <nav>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item">Pages</li>
-              <li class="breadcrumb-item active">Promociones</li>
-            </ol>
-          </nav>
-        </div>
+      <div class="pagetitle">
+        <h1>Editar Usuario</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Pages</li>
+            <li class="breadcrumb-item active">Editar Usuario</li>
+          </ol>
+        </nav>
       </div>
       <!-- End Page Title -->
 
       <section class="section">
         <div class="row">
           <div class="card p-3">
-            <a
-              class="btn btn-primary d-flex align-self-start"
-              href="/pages-create-promotions.html"
-            >
-              + Agregar Producto a Promoción</a
-            >
+            <div class="d-flex justify-content-end">
+              <a
+                class="align-self-end"
+                role="button"
+                onclick="window.history.back()"
+                >Regresar
+              </a>
+            </div>
+
             <hr />
-            <table class="table table-striped">
-      
-                <thead>
-                  <tr>
-                    <th scope="col">Imagen</th>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Codigo de Barras</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Descuento</th>
-                    <th scope="col">Vendido</th>
-                    <th scope="col">Revenue</th>
-                    <th scope="col">Fecha Válida</th>
-                    <th scope="col">Acciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/SloganT-shirt.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-primary fw-bold"
-                        >Slogan T-shirt</a
-                      >
-                    </td>
-                    <td>123456789012</td>
-                    <td>$64</td>
-                    <td>10%</td>
-                    <td class="fw-bold">124</td>
-                    <td>$5,828</td>
-                    <td>2024-02-31</td>
-                    <td>
-                      <a href="/pages-edit-products.html">
-                        <i class="btn bi bi-pencil"></i>
-                      </a>
-                      |
-                      <a href="/pages-detail-products.html">
-                        <i class="btn bi bi-card-text"></i>
-                      </a>
-                      |
-                      <a href="/pages-delete-products.html">
-                        <i class="btn bi bi-trash3"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/deress.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-primary fw-bold"
-                        >Stylish Dress</a
-                      >
-                    </td>
-                    <td>987654321098</td>
-                    <td>$46</td>
-                    <td>28%</td>
-                    <td class="fw-bold">98</td>
-                    <td>$4,508</td>
-                    <td>2024-02-31</td>
-                    <td>
-                      <a href="/pages-edit-products.html">
-                        <i class="btn bi bi-pencil"></i>
-                      </a>
-                      |
-                      <a href="/pages-detail-products.html">
-                        <i class="btn bi bi-card-text"></i>
-                      </a>
-                      |
-                      <a href="/pages-delete-products.html">
-                        <i class="btn bi bi-trash3"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/ClassicFedora.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-primary fw-bold"
-                        >Classic Fedora</a
-                      >
-                    </td>
-                    <td>876543210987</td>
-                    <td>$59</td>
-                    <td>15%</td>
-                    <td class="fw-bold">74</td>
-                    <td>$4,366</td>
-                    <td>2024-02-31</td>
-                    <td>
-                      <a href="/pages-edit-products.html">
-                        <i class="btn bi bi-pencil"></i>
-                      </a>
-                      |
-                      <a href="/pages-detail-products.html">
-                        <i class="btn bi bi-card-text"></i>
-                      </a>
-                      |
-                      <a href="/pages-delete-products.html">
-                        <i class="btn bi bi-trash3"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/Coat.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-primary fw-bold"
-                        >Stylish Trench Coat</a
-                      >
-                    </td>
-                    <td>789012345678</td>
-                    <td>$32</td>
-                    <td>37%</td>
-                    <td class="fw-bold">63</td>
-                    <td>$2,016</td>
-                    <td>2024-02-31</td>
-                    <td>
-                      <a href="/pages-edit-products.html">
-                        <i class="btn bi bi-pencil"></i>
-                      </a>
-                      |
-                      <a href="/pages-detail-products.html">
-                        <i class="btn bi bi-card-text"></i>
-                      </a>
-                      |
-                      <a href="/pages-delete-products.html">
-                        <i class="btn bi bi-trash3"></i>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/Jeans.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                    <td>
-                      <a
-                        href="#"
-                        class="text-primary fw-bold"
-                        >Fashionable Flare Jeans</a
-                      >
-                    </td>
-                    <td>210987654321</td>
-                    <td>$79</td>
-                    <td>22%</td>
-                    <td class="fw-bold">41</td>
-                    <td>$3,239</td>
-                    <td>2024-02-31</td>
-                    <td>
-                      <a href="/pages-edit-products.html">
-                        <i class="btn bi bi-pencil"></i>
-                      </a>
-                      |
-                      <a href="/pages-detail-products.html">
-                        <i class="btn bi bi-card-text"></i>
-                      </a>
-                      |
-                      <a href="/pages-delete-products.html">
-                        <i class="btn bi bi-trash3"></i>
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              
-            </table>
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
+
+            <form
+              class="mx-4 needs-validation"
+              id="editProduct"
+              method="post"
+              novalidate
+            >
+              <div class="row mb-3">
+                <label
+                  for="nombre"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Nombre</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    required
+                    value="Slogan T-shirt"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa el nombre.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="id"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >ID</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="id"
+                    required
+                    value="001"
+                  />
+                  <div class="invalid-feedback">Por favor ingresa el ID.</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="categoria"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Categoría o Tipo</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <select
+                    class="form-control"
+                    id="categoria"
+                    required
+                  >
+                    <option value="">Seleccionar categoría o tipo</option>
+                    <option
+                      selected
+                      value="Clothing"
+                    >
+                      Clothing
+                    </option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Accessories">Accessories</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecciona la categoría o tipo.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="precio"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Precio</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="precio"
+                    required
+                    value="$19.99"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa el precio.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="stock"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Stock</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="stock"
+                    required
+                    value="100"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa el stock.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="sku"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >SKU</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="sku"
+                    required
+                    value="SKU001"
+                  />
+                  <div class="invalid-feedback">Por favor ingresa el SKU.</div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="fechaAgregado"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Fecha de Agregado</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="fechaAgregado"
+                    required
+                    value="2023-09-01"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa la fecha de agregado.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="fechaActualizacion"
+                  class="col-md-4 col-lg-3 col-form-label form-label"
+                  >Fecha de Actualización</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="fechaActualizacion"
+                    required
+                    value="2023-09-15"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor ingresa la fecha de actualización.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  class="col-md-4 col-lg-3 col-form-label"
+                  for="estado"
+                  >Estado</label
+                >
+                <div class="col-md-8 col-lg-9">
+                  <select
+                    class="form-control"
+                    id="estado"
+                    required
+                  >
+                    <option value="">Seleccionar estado</option>
+                    <option
+                      selected
+                      value="Activo"
+                    >
+                      Activo
+                    </option>
+                    <option value="Inactivo">Inactivo</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecciona el estado.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="submit"
+                  value="Actualizar Producto"
+                  class="btn btn-primary"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -981,5 +977,46 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document
+        .getElementById('editProduct')
+        .addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          // Here, you can perform any necessary form validation
+          const username = document.getElementById('nombre').value.trim();
+          const email = document.getElementById('id').value.trim();
+          const firstname = document.getElementById('categoria').value.trim();
+          const lastname = document.getElementById('precio').value.trim();
+          const password = document.getElementById('stock').value.trim();
+          const sku = document.getElementById('sku').value.trim();
+          const estado = document.getElementById('estado').value.trim();
+          const fechaAgregado = document
+            .getElementById('fechaAgregado')
+            .value.trim();
+          const fechaActualizacion = document
+            .getElementById('fechaActualizacion')
+            .value.trim();
+
+          // Check if the username is empty
+          if (
+            username === '' ||
+            password === '' ||
+            email === '' ||
+            firstname === '' ||
+            lastname === '' ||
+            sku === '' ||
+            estado === '' ||
+            fechaAgregado === '' ||
+            fechaActualizacion === ''
+          ) {
+            event.preventDefault(); // Prevent form submission
+          } else {
+            // Continue with form submission
+            // Redirect to index.html
+            window.location.href = '/pages-products.html';
+          }
+        });
+    </script>
   </body>
 </html>
