@@ -7,7 +7,7 @@
       name="viewport"
     />
 
-    <title>Productos - Zara</title>
+    <title>Components / Accordion</title>
     <meta
       content=""
       name="description"
@@ -99,7 +99,7 @@
           href="index.html"
           class="logo d-flex align-items-center"
         >
-          <img
+          <img class="images-logo"
             src="assets/img/Standard.png"
             alt=""
           />
@@ -253,7 +253,7 @@
 
               <li class="message-item">
                 <a href="#">
-                  <img
+                  <img class="images-logo"
                     src="assets/img/messages-1.jpg"
                     alt=""
                     class="rounded-circle"
@@ -274,7 +274,7 @@
 
               <li class="message-item">
                 <a href="#">
-                  <img
+                  <img class="images-logo"
                     src="assets/img/messages-2.jpg"
                     alt=""
                     class="rounded-circle"
@@ -295,7 +295,7 @@
 
               <li class="message-item">
                 <a href="#">
-                  <img
+                  <img class="images-logo"
                     src="assets/img/messages-3.jpg"
                     alt=""
                     class="rounded-circle"
@@ -328,7 +328,7 @@
               href="#"
               data-bs-toggle="dropdown"
             >
-              <img
+              <img class="images-logo"
                 src="assets/img/profile-img.jpg"
                 alt="Perfil"
                 class="rounded-circle"
@@ -352,7 +352,7 @@
               <li>
                 <a
                   class="dropdown-item d-flex align-items-center"
-                  href="products-profile.html"
+                  href="users-profile.html"
                 >
                   <i class="bi bi-person"></i>
                   <span>Mi Perfil</span>
@@ -365,7 +365,7 @@
               <li>
                 <a
                   class="dropdown-item d-flex align-items-center"
-                  href="products-profile.html"
+                  href="users-profile.html"
                 >
                   <i class="bi bi-gear"></i>
                   <span>Account Settings</span>
@@ -417,35 +417,32 @@
           </a>
         </li>
         <!-- End Dashboard Nav -->
-        <li class="nav-item">
-          <a
-            class="nav-link collapsed"
-            data-bs-target="#products-nav"
-            data-bs-toggle="collapse"
-            href="#"
-          >
-            <i class="bi bi-people"></i><span>Usuarios</span
-            ><i class="bi bi-chevron-down ms-auto"></i>
-          </a>
+   <li class="nav-item">
+        <a class="nav-link collapsed"
+           data-bs-target="#users-nav"
+           data-bs-toggle="collapse"
+           href="#">
+            <i class="bi bi-people"></i><span>Usuarios</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
 
-          <ul
-            id="products-nav"
+        <ul id="users-nav"
             class="nav-content collapse"
-            data-bs-parent="#sidebar-nav"
-          >
+            data-bs-parent="#sidebar-nav">
+
             <li>
-              <a href="/pages-products.html">
-                <i class="bi bi-circle"></i><span>Listar Usuarios</span>
-              </a>
+                <a href="/pages-users.html">
+                    <i class="bi bi-circle"></i><span>Listar Usuarios</span>
+                </a>
             </li>
             <li>
-              <a href="/pages-create-products.html">
-                <i class="bi bi-circle"></i><span>Crear Usuario</span>
-              </a>
+                <a href="/pages-create-users.html">
+                    <i class="bi bi-circle"></i><span>Crear Usuario</span>
+                </a>
             </li>
-          </ul>
-        </li>
-        <!-- End products Nav -->
+           
+        </ul>
+    </li>
+<!-- End Users Nav -->
         <li class="nav-item">
           <a
             class="nav-link collapsed"
@@ -671,7 +668,7 @@
         <li class="nav-item">
           <a
             class="nav-link collapsed"
-            href="products-profile.html"
+            href="users-profile.html"
           >
             <i class="bi bi-person"></i>
             <span>Perfil</span>
@@ -707,7 +704,7 @@
             href="pages-blank.html"
           >
             <i class="bi bi-file-earmark"></i>
-            <span>products</span>
+            <span>Users</span>
           </a>
         </li>
         <!-- End Blank Page Nav -->
@@ -721,12 +718,12 @@
     >
       <div class="d-flex justify-content-between">
         <div class="pagetitle">
-          <h1>Inventario de productos</h1>
+          <h1>Promociones</h1>
           <nav>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
               <li class="breadcrumb-item">Pages</li>
-              <li class="breadcrumb-item active">Inventario de productos</li>
+              <li class="breadcrumb-item active">Promociones</li>
             </ol>
           </nav>
         </div>
@@ -735,483 +732,135 @@
 
       <section class="section">
         <div class="row">
-          <div class="card p-3 table-with-scroll">
+          <div class="card p-3">
             <a
               class="btn btn-primary d-flex align-self-start"
-              href="/pages-create-products.html"
+              href="/pages-create-users.html"
             >
-              + Agregar Producto</a
+              + Agregar Producto a Promoci'on</a
             >
             <hr />
             <table class="table table-striped">
-              <thead>
-                <tr>
-                  
-                  <th>Imagen</th>
-                  <th>Nombre</th>
-                  <th>ID</th>
-                  <th>Categoría</th>
-                  <th>Precio</th>
-                  <th>Stock</th>
-                  <th>Codigo de Barras</th>
-                  <th>SKU</th>
-                  <th>Fecha de Agregado</th>
-                  <th>Fecha de Actualización</th>
-                  <th>En Promoción</th>
-                  <th>Estado</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                   <th scope="row">
+      
+                <thead>
+                  <tr>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Codigo de Barras</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Descuento</th>
+                    <th scope="col">Vendido</th>
+                    <th scope="col">Revenue</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
                       <a href="#"
                         ><img class="images-logo"
                           src="assets/img/SloganT-shirt.jpg"
                           alt=""
                       /></a>
                     </th>
-                  <td>Slogan T-shirt</td>
-                  <td>001</td>
-                  <td>Clothing</td>
-                  <td>$19.99</td>
-                  <td>100</td>
-                  <td>123456789012</td>
-                  <td>SKU001</td>
-
-                  <td>2023-09-01</td>
-                  <td>2023-09-15</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
+                    <td>
+                      <a
+                        href="#"
+                        class="text-primary fw-bold"
+                        >Slogan T-shirt</a
+                      >
+                    </td>
+                    <td>123456789012</td>
+                    <td>$64</td>
+                    <td>10%</td>
+                    <td class="fw-bold">124</td>
+                    <td>$5,828</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
                       <a href="#"
                         ><img class="images-logo"
                           src="assets/img/deress.jpg"
                           alt=""
                       /></a>
                     </th>
-                  <td>Stylish Dress</td>
-                  <td>002</td>
-                  <td>Clothing</td>
-                  <td>$39.99</td>
-                  <td>50</td>
-                  <td>987654321098</td>
-                  <td>SKU002</td>
-
-                  <td>2023-09-02</td>
-                  <td>2023-09-16</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/shoes.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                  <td>Streetwise High-Tops</td>
-                  <td>003</td>
-                  <td>Footwear</td>
-                  <td>$49.99</td>
-                  <td>75</td>
-                  <td>543210987654</td>
-                  <td>SKU003</td>
-
-                  <td>2023-09-03</td>
-                  <td>2023-09-17</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                     checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                   <th scope="row">
+                    <td>
+                      <a
+                        href="#"
+                        class="text-primary fw-bold"
+                        >Stylish Dress</a
+                      >
+                    </td>
+                    <td>987654321098</td>
+                    <td>$46</td>
+                    <td>28%</td>
+                    <td class="fw-bold">98</td>
+                    <td>$4,508</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
                       <a href="#"
                         ><img class="images-logo"
                           src="assets/img/ClassicFedora.jpg"
                           alt=""
                       /></a>
                     </th>
-                  <td>Classic Fedora</td>
-                  <td>004</td>
-                  <td>Accessories</td>
-                  <td>$9.99</td>
-                  <td>200</td>
-                  <td>876543210987</td>
-                  <td>SKU004</td>
-
-                  <td>2023-09-04</td>
-                  <td>2023-09-18</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                   <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/floppy.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                  <td>Bohemian Floppy Hat</td>
-                  <td>005</td>
-                  <td>Accessories</td>
-                  <td>$29.99</td>
-                  <td>80</td>
-                  <td>234567890123</td>
-                  <td>SKU005</td>
-
-                  <td>2023-09-05</td>
-                  <td>2023-09-19</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                     checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                   <th scope="row">
+                    <td>
+                      <a
+                        href="#"
+                        class="text-primary fw-bold"
+                        >Classic Fedora</a
+                      >
+                    </td>
+                    <td>876543210987</td>
+                    <td>$59</td>
+                    <td>15%</td>
+                    <td class="fw-bold">74</td>
+                    <td>$4,366</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
                       <a href="#"
                         ><img class="images-logo"
                           src="assets/img/Coat.jpg"
                           alt=""
                       /></a>
                     </th>
-                  <td>Stylish Trench Coat</td>
-                  <td>006</td>
-                  <td>Clothing</td>
-                  <td>$59.99</td>
-                  <td>40</td>
-                  <td>789012345678</td>
-                  <td>SKU006</td>
-
-                  <td>2023-09-06</td>
-                  <td>2023-09-20</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/socks.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                  <td>Cozy Crew Socks</td>
-                  <td>007</td>
-                  <td>Accessories</td>
-                  <td>$5.99</td>
-                  <td>150</td>
-                  <td>345678901234</td>
-                  <td>SKU007</td>
-
-                  <td>2023-09-07</td>
-                  <td>2023-09-21</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr><th scope="row">
+                    <td>
+                      <a
+                        href="#"
+                        class="text-primary fw-bold"
+                        >Stylish Trench Coat</a
+                      >
+                    </td>
+                    <td>789012345678</td>
+                    <td>$32</td>
+                    <td>37%</td>
+                    <td class="fw-bold">63</td>
+                    <td>$2,016</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
                       <a href="#"
                         ><img class="images-logo"
                           src="assets/img/Jeans.jpg"
                           alt=""
                       /></a>
                     </th>
-                  <td>Fashionable Flare Jeans</td>
-                  <td>008</td>
-                  <td>Clothing</td>
-                  <td>$39.99</td>
-                  <td>60</td>
-                  <td>210987654321</td>
-                  <td>SKU008</td>
-
-                  <td>2023-09-08</td>
-                  <td>2023-09-22</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr><th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/bowler.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                  <td>Gatsby-Inspired Bowler</td>
-                  <td>009</td>
-                  <td>Accessories</td>
-                  <td>$12.99</td>
-                  <td>180</td>
-                  <td>654321098765</td>
-                  <td>SKU009</td>
-
-                  <td>2023-09-09</td>
-                  <td>2023-09-23</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                      <a href="#"
-                        ><img class="images-logo"
-                          src="assets/img/lace.jpg"
-                          alt=""
-                      /></a>
-                    </th>
-                  <td>Vintage Lace Dress</td>
-                  <td>010</td>
-                  <td>Clothing</td>
-                  <td>$29.99</td>
-                  <td>70</td>
-                  <td>432109876543</td>
-                  <td>SKU010</td>
-
-                  <td>2023-09-10</td>
-                  <td>2023-09-24</td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    
-                  /></td>
-                  <td> <input
-                    type="checkbox"
-                    name="activated"
-                    id="activated"
-                    checked
-                  /></td>
-
-                  <td>
-                    <a href="/pages-edit-products.html">
-                      <i class="btn bi bi-pencil"></i>
-                    </a>
-                    |
-                    <a href="/pages-detail-products.html">
-                      <i class="btn bi bi-card-text"></i>
-                    </a>
-                    |
-                    <a href="/pages-delete-products.html">
-                      <i class="btn bi bi-trash3"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
+                    <td>
+                      <a
+                        href="#"
+                        class="text-primary fw-bold"
+                        >Fashionable Flare Jeans</a
+                      >
+                    </td>
+                    <td>210987654321</td>
+                    <td>$79</td>
+                    <td>22%</td>
+                    <td class="fw-bold">41</td>
+                    <td>$3,239</td>
+                  </tr>
+                </tbody>
+              
             </table>
           </div>
         </div>
