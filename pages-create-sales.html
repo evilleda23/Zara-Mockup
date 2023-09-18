@@ -720,12 +720,12 @@
       class="main"
     >
       <div class="pagetitle">
-        <h1>Crear Usuario</h1>
+        <h1>Realizar Venta</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item">Pages</li>
-            <li class="breadcrumb-item active">Crear Usuario</li>
+            <li class="breadcrumb-item active">Realizar Venta</li>
           </ol>
         </nav>
       </div>
@@ -778,6 +778,82 @@
                   class="tab-pane fade show active"
                   id="step-1"
                 >
+                  <form
+                    class="mx-4 needs-validation"
+                    id="createProduct"
+                    method="post"
+                    novalidate
+                  >
+                    <a
+                      class="btn btn-link"
+                      href="#"
+                      >Escanear codigo de barras</a
+                    >
+                    <br />
+                    <div class="row mb-3">
+                      <label
+                        for="barcode"
+                        class="col-md-4 col-lg-3 col-form-label form-label"
+                        >Codigo de Barras</label
+                      >
+                      <div class="col-md-8 col-lg-9">
+                        <input
+                          class="form-control"
+                          id="barcode"
+                          value="432109876543"
+                          disabled
+                        />
+                        <div class="invalid-feedback">
+                          Por favor ingresa el Codigo de Barras.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label
+                        for="product-name"
+                        class="col-md-4 col-lg-3 col-form-label form-label"
+                        >Nombre del Producto</label
+                      >
+                      <div class="col-md-8 col-lg-9">
+                        <input
+                          class="form-control"
+                          id="product-name"
+                          disabled
+                          value="Vintage Lace Dress	"
+                        />
+                        <div class="invalid-feedback">
+                          Por favor ingresa el Nombre del Producto.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <label
+                        for="quantity"
+                        class="col-md-4 col-lg-3 col-form-label form-label"
+                        >Cantidad</label
+                      >
+                      <div class="col-md-8 col-lg-9">
+                        <input
+                          type="number"
+                          min="1"
+                          class="form-control"
+                          id="quantity"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Por favor ingresa la Cantidad.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input
+                        type="submit"
+                        value="Agregar"
+                        class="btn btn-primary"
+                      />
+                    </div>
+                  </form>
+                  <hr>
                   <h2>Productos</h2>
                   <table class="table table-striped">
                     <thead>
@@ -831,8 +907,79 @@
                   class="tab-pane fade"
                   id="step-2"
                 >
-                  <h5 class="card-title">Step 2 Content</h5>
                   <!-- Add your content for Step 2 here -->
+                  <form
+                    class="mx-4 needs-validation"
+                    id="createProduct"
+                    method="post"
+                    novalidate
+                  >
+    
+                    <div class="row mb-3">
+                      <label
+                        for="barcode"
+                        class="col-md-4 col-lg-3 col-form-label form-label"
+                        >Cupon de descuento</label
+                      >
+                      <div class="col-md-8 col-lg-9">
+                        <input
+                          class="form-control"
+                          id="barcode"
+                          value="HTMLSALES"
+                         
+                        />
+                        <div class="invalid-feedback">
+                          Por favor ingresa el Codigo de Barras.
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="row mb-3">
+                      <label
+                        for="quantity"
+                        class="col-md-4 col-lg-3 col-form-label form-label"
+                        >Cantidad</label
+                      >
+                      <div class="col-md-8 col-lg-9">
+                        <input
+                          type="text"
+                          
+                          value="15%"
+                          class="form-control"
+                          id="quantity"
+                          disabled
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Por favor ingresa la Cantidad.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input
+                        type="submit"
+                        value="Aplicar"
+                        class="btn btn-primary"
+                      />
+                    </div>
+                  </form>
+                  <hr>
+                  <h1>Opciones de Pago</h1>
+                  <div class="payment-options">
+                      <label for="efectivo">
+                          <input type="radio" id="efectivo" name="payment" value="efectivo" onclick="showWaitingMessage()">
+                          Pago en Efectivo
+                      </label>
+                      <br>
+                      <label for="tarjeta">
+                          <input type="radio" id="tarjeta" name="payment" value="tarjeta" onclick="showWaitingMessage()">
+                          Pago con Tarjeta
+                      </label>
+                  </div>
+                  <p id="waiting-message">Esperando señal del POS...</p>
+                  <hr>
+                  
+                  
                   <button
                     onclick="nextStep(3)"
                     class="btn btn-primary"
@@ -846,14 +993,76 @@
                   class="tab-pane fade"
                   id="step-3"
                 >
-                  <h5 class="card-title">Step 3 Content</h5>
+                <br>
+                <div class="invoice">
+                  <div class="header">
+                      <h1>Factura Zara</h1>
+                      <p>Fecha: 15 de septiembre de 2023</p>
+                  </div>
+                  <div class="invoice-details">
+                      <p>Cliente: Moises</p>
+                      <p>Correo: prueba@prueba.com</p>
+                      <p>Dirección: Ciudad</p>
+                  </div>
+                  <table class="invoice-table">
+                      <thead>
+                          <tr>
+                              <th>Producto</th>
+                             
+                              <th>Cantidad</th>
+                              <th>Precio Unitario</th>
+                              <th>Descuento</th>
+                              <th>Total</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>Classic Fedora</td>
+                      
+                              <td>1</td>
+                              <td>$60.00</td>
+                              <td>$0.00</td>
+                              <td>$60.00</td>
+                          </tr>
+                          <tr>
+                              <td>Stylish Trench Coat</td>
+                            
+                              <td>1</td>
+                              <td>$48.00</td>
+                              <td>$4.80</td>
+                              <td>$43.20</td>
+                          </tr>
+                      </tbody>
+                      <tfoot>
+                          <tr>
+                              <td colspan="5" style="text-align: right;">Subtotal:</td>
+                              <td>$103.20</td>
+                          </tr>
+                          <tr>
+                              <td colspan="5" style="text-align: right;">Descuento Cupon:</td>
+                              <td>$20.00 (-)</td>
+                          </tr>
+                          <tr>
+                              <td colspan="5" style="text-align: right;">Total:</td>
+                              <td>$83.20</td>
+                          </tr>
+                      </tfoot>
+                  </table>
+                  <hr>
+              </div>
                   <!-- Add your content for Step 3 here -->
+                  <a
+                  href="#"
+                  class="btn btn-primary"
+                  >Enviar por Correo</a
+                >
+        
                   <a
                     href="/pages-sales.html"
                     class="btn btn-primary"
                     >Finalizar</a
                   >
-                </div>
+                
               </div>
               <!-- End Stepper Content -->
             </div>
@@ -947,5 +1156,15 @@
         }
       }
     </script>
+     <script>
+      function showWaitingMessage() {
+          var paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+          if (paymentMethod === "tarjeta") {
+              document.getElementById('waiting-message').style.display = 'block';
+          } else {
+              document.getElementById('waiting-message').style.display = 'none';
+          }
+      }
+  </script>
   </body>
 </html>
